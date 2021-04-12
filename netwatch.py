@@ -1,4 +1,9 @@
 import os
+import pyfiglet
+
+banner = pyfiglet.figlet_format("Gachi honeypot")
+
+print(banner)
 
 print("Scanning...")
 
