@@ -4,7 +4,7 @@ print("Scanning...")
 
 choice = "n"
 
-while(run):
+while(1):
     status = os.system("netstat | grep 4444")
 
     if(status == 256):
