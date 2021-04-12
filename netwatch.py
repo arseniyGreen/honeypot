@@ -3,7 +3,6 @@ import os
 print("Scanning...")
 
 choice = "n"
-run = True
 
 while(run):
     status = os.system("netstat | grep 4444")
@@ -28,4 +27,5 @@ while(run):
             break
         else:
             print("Invalid input!")
-            break
+            print("Going to kill all www-data processes. Continue? [y/n]")
+            choice = input()
