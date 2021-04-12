@@ -3,8 +3,9 @@ import os
 print("Scanning...")
 
 choice = "n"
+run = True
 
-while(1):
+while(run):
     status = os.system("netstat | grep 4444")
 
     if(status == 256):
@@ -27,4 +28,4 @@ while(1):
             break
         else:
             print("Invalid input!")
-            return
+            break
