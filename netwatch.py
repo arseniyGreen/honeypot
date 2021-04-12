@@ -18,10 +18,13 @@ while(1):
             os.system("sudo killall --user www-data")
             if(os.system("sudo killall --user www-data") == 0):
                 print("Success!")
+                break
             else:
                 print("Error occured!")
+                break
         elif(choice == "n"):
             print("Exiting...")
             break
         else:
             print("Invalid input!")
+            return
