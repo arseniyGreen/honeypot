@@ -1,9 +1,9 @@
+# Script must be ran in the same directory as rule.yara
+
 import os
-#import pyfiglet
+import pyfiglet
 
-#banner = pyfiglet.figlet_format("Gachi honeypot")
-
-#print(banner)
+print(pyfiglet.figlet_format("Gachi honeypot"))
 
 print("Scanning...")
 
