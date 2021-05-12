@@ -18,6 +18,7 @@ while(True):
         if(choice == "Y"):
             os.system("sudo killall --user www-data")
             print("Done!")
+            break
         else:
             print("Exiting...")
             break
