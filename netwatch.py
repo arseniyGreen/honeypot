@@ -11,7 +11,7 @@ print("Scanning...")
 choice = "N"
 
 while(True):
-    status = str(subprocess.run(["yara", "rule.yara", "/opt/zeek/logs/current"]))
+    status = str(subprocess.run(["yara", "rule.yara", "/opt/zeek/logs/current"], capture_output = True))
     if "meterpreter" in status:
         print("Compromise detected!")
         choice = input("Going to kill all www-data processes. Proceed?[Y/N]")
