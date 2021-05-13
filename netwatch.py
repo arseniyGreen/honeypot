@@ -1,4 +1,8 @@
+#  Honeypot script, scanning Zeek logs to find POST requests on wp-admin vulnerable form  #
+#  Made by Arkadskov Arseniy, Motin Danila and Bobrov Ilya, KTSO-02-20. #
+
 # Script must be ran in the same directory as rule.yara
+# Also root user required for this script to run properly
 
 import subprocess
 import os
