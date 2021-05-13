@@ -6,9 +6,12 @@ import pyfiglet
 
 print(pyfiglet.figlet_format("Gachi honeypot"))
 
-print("Scanning...")
+rootCheck = str(subprocess.run(["whoami"], capture_output = True))
 
 choice = "N"
+
+if "root" in rootCheck:
+    print("Scanning...")
 
 while(True):
     status = str(subprocess.run(["yara", "rule.yara", "/opt/zeek/logs/current"], capture_output = True))
@@ -25,3 +28,5 @@ while(True):
     else:
         print("No suspicious activity found")
         os.system("sleep 5")
+else:
+    print("Not a root user! Please use sudo to run this script.")
